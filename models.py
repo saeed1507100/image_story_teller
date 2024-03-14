@@ -3,7 +3,6 @@ from transformers import pipeline
 from constants import HUGGINGFACE_BASE_URL
 import requests
 import os
-from IPython.display import Audio
 
 def img2text_local(url):
     # Load the model
