@@ -22,7 +22,7 @@ def img2text(image_path):
 
     response = requests.post(API_URL, headers=headers, data=data)
     print(response.json())
-    output = response.json()[0]["generated_text"] if insinstance(response.json(), list) else response.json()["generated_text"]
+    output = response.json()[0]["generated_text"] if isinstance(response.json(), list) else response.json()["generated_text"]
     print("Image scenario:", output)
     return output
 
@@ -43,7 +43,7 @@ def generate_story(scenario, n=20):
         "inputs": template.format(scenario=scenario, n=n)
     }
     response = requests.post(API_URL, headers=headers, json=payload)
-    output = response.json()[0]["generated_text"] if insinstance(response.json(), list) else response.json()["generated_text"]
+    output = response.json()[0]["generated_text"] if isinstance(response.json(), list) else response.json()["generated_text"]
     
     print(output)
     output = output.split("Story:\n")[1]
