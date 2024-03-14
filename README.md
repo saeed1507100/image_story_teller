@@ -15,7 +15,11 @@ to get your own hugging face hub api key, follow the instructions at: [get-your-
 pip install -r requirements.txt
 ```
 
-## 3. RUn the app with streamlit
+## 3. Run the app with streamlit
 ```
 streamlit run app.py
 ```
+
+# Demo of the app
+
+https://ai-storyteller.streamlit.app/
